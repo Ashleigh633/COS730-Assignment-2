@@ -12,10 +12,10 @@ warnings.filterwarnings('ignore')
 tracks = pd.read_csv('tracks_transformed.csv')
 
 # Import and display artist data
-artists = pd.read_csv('./artists_transformed.csv')
+artists = pd.read_csv('artists_transformed.csv')
 
 # Import and display genre data
-genres = pd.read_csv('./data_by_genres_o.csv', na_filter=False)
+genres = pd.read_csv('data_by_genres_o.csv', na_filter=False)
 
 
 # # Data Prepping
