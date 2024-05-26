@@ -1,6 +1,10 @@
 import unittest
-from recommendation_system import song_recommender, artist_recommender
 import pandas as pd
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from recommendation_system import song_recommender, artist_recommender
 
 import warnings
 warnings.filterwarnings('ignore')
