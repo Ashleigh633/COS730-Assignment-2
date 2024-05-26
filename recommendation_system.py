@@ -55,8 +55,7 @@ def song_recommender(song_name):
         song = popular_songs[popular_songs['name'] == song_name]
         
         if song.empty:
-            print(f'{song_name} not found.')
-            return
+            return None
 
         # Create vectors for the given song -> The cosine similarity function requires numerical vectors to compute the similarity between items
         song_genre_vect = vectorizer.transform(song['genres']).toarray()
@@ -108,8 +107,7 @@ def artist_recommender(artist_name):
         artist = popular_artists[popular_artists['name'] == artist_name]
         
         if artist.empty:
-            print(f'{artist_name} not found.')
-            return
+            return None
 
         # Create vectors for the given artist -> The cosine similarity function requires numerical vectors to compute the similarity between items
         artist_genre_vect = artist_vectorizer.transform(artist['genres']).toarray()
